@@ -35,7 +35,6 @@
 
   /* header */
   .header {
-    font-family: "Noto Sans JP", sans-serif;
     height: 80px;
     background-color: var(--color-background-black);
     display: flex;
