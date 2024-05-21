@@ -1,6 +1,11 @@
 :root {
+<<<<<<< HEAD
     --font-family-heading: "Anton", sans-serif;
     --font-family-body: "Noto Sans JP", sans-serif;
+=======
+    --font-family-anton: "Anton", sans-serif;
+    --font-family-noto-sans-jp: "Noto Sans JP", sans-serif;
+>>>>>>> 88196a8f6051ef7398400d073d22e8943914cf84
   
     --color-white: #fffefc;
     --color-black: #020911;
@@ -50,11 +55,16 @@
   .header-logo-wrrapper {
     margin: 0;
   }
+<<<<<<< HEAD
   
+=======
+
+>>>>>>> 88196a8f6051ef7398400d073d22e8943914cf84
   .header-logo {
      height: 50px;
   }
 
+<<<<<<< HEAD
   @media (max-width: 750px) {
     .header {
 
@@ -67,13 +77,31 @@
   
   
 }
+=======
+  @media (max-width: 750px){
+ .hero {
+   margin-top: 60px;
+   padding: flex-start;
+ } 
+
+ .header-logo{
+  height: 30px;
+
+  
+ }
+>>>>>>> 88196a8f6051ef7398400d073d22e8943914cf84
 }
 
 /* hero */
 
+<<<<<<< HEAD
 
 .hero {
   background-image: url("./img/hero.png");
+=======
+.hero {
+  background-image: url(*./img/hero.png*);
+>>>>>>> 88196a8f6051ef7398400d073d22e8943914cf84
   background-size: cover;
   display: flex;
   justify-content: center;
@@ -81,6 +109,7 @@
   padding: 94px 40px;
   position: relative;
   margin-top:80px;
+<<<<<<< HEAD
 }
 
   .hero::after {
@@ -108,6 +137,33 @@
 }  
   
 
+=======
+
+}
+
+
+.hero::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-hero-overlay);
+
+}
+
+.hero-container{
+  width: 100%;
+  max-width: 1000px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.hero-texts {
+  color: var(--color-accent-yellow);
+}
+>>>>>>> 88196a8f6051ef7398400d073d22e8943914cf84
 .hero-main-copy {
   font-family: var(--font-family-heading);
   font-size: 64px;
@@ -115,6 +171,7 @@
   margin: 0;
   letter-spacing: 0.05em;
   color: var(--color-accent-yellow);
+<<<<<<< HEAD
 }  
 
 
@@ -122,6 +179,9 @@
 
 
 
+=======
+}
+>>>>>>> 88196a8f6051ef7398400d073d22e8943914cf84
 
 .hero-main-copy-accent {
   color: var(--color-accent-red);
@@ -129,6 +189,7 @@
 
 .hero-sub-copy {
   margin: 0;
+<<<<<<< HEAD
 }
 
 @media (max-width: 750px){
@@ -144,4 +205,6 @@ padding: 40px 20px;
 
 .hero-texts {
   gap: 20px;
+=======
+>>>>>>> 88196a8f6051ef7398400d073d22e8943914cf84
 }
