@@ -124,11 +124,9 @@ img {
     margin-top: 60px;
     padding: 40px 20px;
   }
-
   .hero-container {
     justify-content: flex-start;
   }
-
   .hero-texts {
     gap: 20px;
   }
