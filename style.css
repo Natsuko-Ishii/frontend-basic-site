@@ -1,7 +1,6 @@
 :root {
-  --font-family-heading: "Anton", sans-serif;
-  --font-family-body: "Noto Sans JP", sans-serif;
-
+  --font-family-anton: "Anton", sans-serif;
+  --font-family-noto-sans-jp: "Noto Sans JP", sans-serif;
   --color-white: #fffefc;
   --color-black: #020911;
   --color-accent-red: #f20574;
@@ -16,23 +15,19 @@
   --color-hero-overlay: rgba(57, 24, 111, 0.4);
   --color-course-overlay: rgba(32, 8, 19, 0.63);
 }
-
 /* global */
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
+  box-sizing:  border-box;
 }
-
-body {
+body{
   margin: 0;
   font-family: var(--font-family-body);
 }
-
-img {
+img{
   display: block;
 }
-
 /* header */
 .header {
   height: 80px;
@@ -40,94 +35,544 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 10;
-}
-
-.header-logo-wrapper {
+} 
+.header-logo-wrapper{
   margin: 0;
 }
-
-.header-logo {
-  height: 50px;
+.header-logo-wrrapper {
+  margin: 0;
 }
-
-@media (max-width: 750px) {
-  .header {
-    height: 60px;
-  }
-
-  .header-logo {
-    height: 30px;
-  }
+.header-logo {
+   height: 50px;
+}
+@media (max-width: 750px){
+.header{
+height: 60px;
+} 
+.header-logo{
+height: 30px;
+}
 }
 
 /* hero */
 .hero {
-  background-image: url("./img/hero.png");
-  background-size: cover;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 96px 40px;
   position: relative;
-  margin-top: 80px;
-}
+  height: 100vh;
+  background-image: url('https://cdn.glitch.global/6210f1af-b1c6-4649-be45-b35f350f23cc/hero.png?v=1717470672870');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height:501px;
+  
 
-.hero::after {
+}
+.hero::before {
   content: "";
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  
   background-color: var(--color-hero-overlay);
-}
-
-.hero-container {
-  width: 100%;
-  max-width: 1000px;
-  display: flex;
-  justify-content: flex-end;
   z-index: 1;
+  height:501px;
+  
+}
+.hero-container {
+  margin-left:600px;
+  margin-top:-300px ;
+  position: relative;
+  text-align: left;
+  color: var(--color-white);
+  z-index: 2;
 }
 
+@media (max-width: 750px){
 .hero-texts {
   display: flex;
   flex-direction: column;
   gap: 30px;
+  margin-left:-480px;
+  margin-top:0px;
+}
+{
+  .hero-main-copy {
+   margin-left:100px;
+  }
+}
 }
 
-.hero-main-copy {
-  margin: 0;
+.hero-texts {
   color: var(--color-accent-yellow);
-  font-family: var(--font-family-heading);
-  font-size: 64px;
-  line-height: 64px;
-  letter-spacing: 0.05em;
+  display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-top:300px;
+
 }
+
 
 .hero-main-copy-accent {
   color: var(--color-accent-red);
 }
-
 .hero-sub-copy {
   margin: 0;
-  color: var(--color-accent-yellow);
+  font-size: 16px;
+  margin-top: -80px;
+}
+
+.hero-main-copy {
+font-family: var(--font-family-heading);
+font-size: 64px;
+line-height: 64px;
+margin: 0;
+letter-spacing: 0.05em;
+color: var(--color-accent-yellow);
+}
+
+
+
+
+/* sections */
+.sections {
+background-size: cover;
+display: flex;
+justify-content: center;
+align-items: center;
+padding: 80px 0;
+position: relative;
+width: 100%;
+
+}
+/* about */
+.about {
+background-color: var(--color-background-black);
+}
+.section-container {
+display: flex;
+align-items: center;
+flex-direction: column;
+gap: 40px;
+padding: 0 40px;
+
+  }
+
+
+
+.section-title-content {
+color: var(--color-white);
+font-family: var(--font-family-heading);
+font-size: 32px;
+font-weight: 400;
+letter-spacing: 0.02em;
+margin: 0;
+
+
+}
+
+.section-title-red {
+color: var(--color-accent-red);
+}
+
+.section-title-yellow {
+color: var(--color-accent-yellow);
+}
+
+.section-body {
+display: flex;
+align-items: center;
+flex-direction: row;
+gap: 20px;
 }
 
 @media (max-width: 750px) {
-  .hero {
-    margin-top: 60px;
-    padding: 40px 20px;
+  .section-body-text {
+    
+      max-width: 100%;
+      display:flex;
+      display: flex;
+align-items: center;
+flex-direction: row;
+gap: 20px;
+flex:1;}
+
+
+
   }
-  .hero-container {
-    justify-content: flex-start;
-  }
-  .hero-texts {
-    gap: 20px;
-  }
+
+
+.section-body-text-content {
+width: 100%;
+max-width: 460px;
+margin: 0;
+color: var(--color-white);
+font-size: 16px;
+font-weight: 400;
+
 }
+
+.section-body-img-content {
+width: 320px;
+height: 180px;
+}
+
+/* courses */
+
+.courses {
+background-color: var(--color-background-navy);
+}
+
+.section-cards {
+display: flex;
+width: 100%;
+align-items: center;
+flex-direction: column;
+gap: 20px;
+}
+
+.section-card {
+text-decoration: none;
+display: flex;
+height: 100%;
+flex-direction: row;
+padding: 0;
+}
+
+.section-card-title {
+background-size: cover;
+display: flex;
+width: 250px;
+flex: 0 0 auto;
+justify-content: center;
+align-items: center;
+position: relative;
+
+
+}
+
+.section-card-title::after {
+content: "";
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-color: var(--color-hero-overlay);
+}
+
+.section-card-title-content {
+color: var(--color-white);
+font-family: var(--font-family-heading);
+font-size: 32px;
+font-weight: 400;
+letter-spacing: 0.05em;
+margin: 0;
+z-index: 1;
+position: absolute;
+
+}
+
+
+.section-card-body {
+display: flex;
+height: 100%;
+max-width: 510px;
+flex-direction: column;
+align-items: flex-end;
+padding: 20px;
+gap: 10px;
+}
+
+.section-card-text-content {
+margin: 0 0;
+width: 100%;
+color: var(--color-black);
+font-size: 16px;
+font-weight: 400;
+}
+
+.more {
+margin: 0 0;
+color: var(--color-accent-red);
+font-size: 16px;
+}
+
+.section-button {
+display: flex;
+align-self: stretch;
+height: 60px;
+padding: 10px 40px;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+position: relative;
+text-decoration: none;
+}
+.more-course {
+color: var(--color-white);
+font-size: 20px;
+font-weight: 400;
+
+}
+
+.button-arrow {
+position: absolute;
+right: 40px;
+}
+
+.red-shadow {
+background-color: var(--color-accent-yellow);
+box-shadow: 4px 4px 0 var(--color-accent-red);
+transition-duration: 0.3s;
+}
+
+.yellow-shadow {
+background-color: var(--color-accent-red);
+box-shadow: 4px 4px 0 var(--color-accent-yellow);
+transition-duration: 0.3s;
+}
+
+/* hover */
+.red-shadow:hover {
+background-color: var(--color-course-hover-yellow);
+box-shadow: 12px 12px 2px 0 var(--color-accent-red);
+}
+
+.yellow-shadow:hover {
+background-color: var(--color-button-hover-red);
+box-shadow: 12px 12px 2px 0 var(--color-accent-yellow);
+}
+
+/* レスポンシブデザイン */
+@media (max-width: 750px) {
+/* header */
+.header {
+  height: 60px;
+}
+@@ -117,6 +310,7 @@ img {
+  height: 30px;
+}
+
+
+
+/* sections */
+.sections {
+  padding: 0;
+}
+
+.section-container {
+  width: 100%;
+  padding: 40px 20px;
+}
+
+.section-title-content {
+  font-size: 24px;
+}
+
+/* about */
+.section-body-text-content {
+  max-width: 100%;
+  font-family: Inter;
+}
+
+.section-body-img {
+  width:100%;
+}
+
+/* courses */
+
+.section-card {
+  width: 100%;
+  flex-direction: column;
+}
+
+.section-card-title {
+  width: 120%;
+  height: 200px;
+  align-self: stretch;
+  img[src="https://cdn.glitch.global/dd29325c-0d25-451c-996f-d7a60772a4b5/hero.jpeg?v=1685611293394"]{ /*透けている部分*/
+
+
+  }}
+
+.section-card-body {
+  width: 100%;
+  max-width: 710px;
+  gap: 0;
+}
+
+
+@media{
+  .section-card-text-content{
+    margin-left:275px;
+    height:100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    font-size: 16px;
+    transition-duration: 0.3s;
+    
+      }
+}
+.section-card-text{
+  width: 190%;
+    }
+
+.section-card-text-content {
+  width: 100%;
+  font-family: Inter;
+  font-size: 12px;
+    /*透けている部分*/
+    position: relative;
+    display: inline-block;
+    width: 100%; /* 必要に応じて調整 */
+    max-width:  /* 必要に応じて調整 */
+    display: block;
+    width: 100%;
+    filter: brightness(50%); /* 画像を暗くする */
+  margin-top:25px;
+}
+}
+
+.section-button {
+  height: 40px;
+}
+
+.more {
+  font-family: Inter;
+  font-size: 12px;
+}
+
+.more-course {
+  font-size: 14px;
+}
+
+.button-arrow {
+  right: 20px;
+}
+
+.arrow {
+  width: 30px;
+}
+}
+
+/*ここから*/
+
+
+
+
+
+.course-image/*４つの写真*/ {
+  position: relative;
+  height: 150px;
+  width:250px;
+  overflow: hidden;
+
+}
+
+.course-image.section-card-title h3 {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.frontman {
+  background: url('https://cdn.glitch.global/6210f1af-b1c6-4649-be45-b35f350f23cc/live.png?v=1717470703729') no-repeat center center;
+  background-size: cover;
+  width: 250px;
+ color: white; /* 文字の色を白に設定 */
+}
+
+.backing {
+  background: url('https://cdn.glitch.global/6210f1af-b1c6-4649-be45-b35f350f23cc/live.png?v=1717470703729') no-repeat center center;
+  background-size: cover;
+height:170px;
+width: 250px;
+ color: white; /* 文字の色を白に設定 */
+}
+
+.lead {
+  background: url('https://cdn.glitch.global/6210f1af-b1c6-4649-be45-b35f350f23cc/live.png?v=1717470703729') no-repeat center center;
+  background-size: cover;
+  width: 250px;
+ color: white; /* 文字の色を白に設定 */
+}
+
+.solo {
+  background: url('https://cdn.glitch.global/6210f1af-b1c6-4649-be45-b35f350f23cc/live.png?v=1717470703729') no-repeat center center;
+  background-size: cover;
+  width: 250px;
+ color: white; /* 文字の色を白に設定 */
+}
+
+.frontman::before, .backing::before, .lead::before, .solo::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* 半透明の黒 */
+  z-index: 1;
+}
+
+.course-image  {
+  position: relative;
+  z-index: 2; /* オーバーレイの上に配置 */
+  text-align: center; /* テキストを中央に配置 */
+  padding: 20px; /* パディングで余白を追加 */
+  font-size: 24px; /* フォントサイズを設定 */
+color: white;
+}
+
+.backing {
+  height: 170px;
+}
+
+.course-image h3 {
+  position: relative;
+  z-index: 2; /* オーバーレイの上に配置 */
+  margin: 0;
+  padding: 40px;
+  text-align: center;
+  font-size: 24px; /* フォントサイズを設定 */
+}
+
+/* Googleフォントを使用するためのCSS */
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+h1, h2, h3 {
+  font-family: 'Anton', sans-serif;
+}
+
+.header-logo-wrapper img {
+  max-width: 100%;
+  height: auto;
+}
+
+.hero-main-copy, .hero-sub-copy {
+  font-family: 'Anton', sans-serif;
+}
+
+.section-title-content {
+  font-family: 'Anton', sans-serif;
+}
+
+.section-body-text-content, .section-card-text-content, .more {
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+.more-course {
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
