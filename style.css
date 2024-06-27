@@ -64,6 +64,8 @@ height: 30px;
   display: flex;
   align-items: center;
   justify-content: center;
+  height:501px;
+  
 
 }
 .hero::before {
@@ -72,9 +74,11 @@ height: 30px;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  
   background-color: var(--color-hero-overlay);
   z-index: 1;
+  height:501px;
+  
 }
 .hero-container {
   margin-left:600px;
@@ -84,9 +88,31 @@ height: 30px;
   color: var(--color-white);
   z-index: 2;
 }
+
+@media (max-width: 750px){
+.hero-texts {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-left:-480px;
+  margin-top:0px;
+}
+{
+  .hero-main-copy {
+   margin-left:100px;
+  }
+}
+}
+
 .hero-texts {
   color: var(--color-accent-yellow);
+  display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-top:300px;
+
 }
+
 
 .hero-main-copy-accent {
   color: var(--color-accent-red);
@@ -94,12 +120,13 @@ height: 30px;
 .hero-sub-copy {
   margin: 0;
   font-size: 16px;
+  margin-top: -80px;
 }
 
 .hero-main-copy {
 font-family: var(--font-family-heading);
 font-size: 64px;
-line-height: 1;
+line-height: 64px;
 margin: 0;
 letter-spacing: 0.05em;
 color: var(--color-accent-yellow);
@@ -117,6 +144,7 @@ align-items: center;
 padding: 80px 0;
 position: relative;
 width: 100%;
+
 }
 /* about */
 .about {
@@ -128,7 +156,10 @@ align-items: center;
 flex-direction: column;
 gap: 40px;
 padding: 0 40px;
-}
+
+  }
+
+
 
 .section-title-content {
 color: var(--color-white);
@@ -155,6 +186,22 @@ align-items: center;
 flex-direction: row;
 gap: 20px;
 }
+
+@media (max-width: 750px) {
+  .section-body-text {
+    
+      max-width: 100%;
+      display:flex;
+      display: flex;
+align-items: center;
+flex-direction: row;
+gap: 20px;
+flex:1;}
+
+
+
+  }
+
 
 .section-body-text-content {
 width: 100%;
@@ -194,7 +241,6 @@ padding: 0;
 }
 
 .section-card-title {
-background-image: url(./img/live.png);
 background-size: cover;
 display: flex;
 width: 250px;
@@ -224,6 +270,8 @@ font-weight: 400;
 letter-spacing: 0.05em;
 margin: 0;
 z-index: 1;
+position: absolute;
+
 }
 
 
@@ -355,6 +403,19 @@ box-shadow: 12px 12px 2px 0 var(--color-accent-yellow);
   gap: 0;
 }
 
+
+@media{
+  .section-card-text-content{
+    margin-left:275px;
+    height:100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    font-size: 16px;
+    transition-duration: 0.3s;
+    
+      }
+}
 .section-card-text{
   width: 190%;
     }
@@ -514,3 +575,4 @@ h1, h2, h3 {
 .more-course {
   font-family: 'Noto Sans JP', sans-serif;
 }
+
