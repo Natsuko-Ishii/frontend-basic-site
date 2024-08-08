@@ -46,6 +46,9 @@ img{
    height: 50px;
 }
 @media (max-width: 750px){
+  .body{
+    margin:0;
+  }
 .header{
 height: 60px;
 } 
@@ -94,16 +97,10 @@ height: 30px;
   display: flex;
   flex-direction: column;
   gap: 30px;
-  margin-left:-630px;
+  margin-left:-530px;
   margin-top:0px;
 }
-.hero{
-  width:720px;
-  height:379px;
-}
-  .hero-main-copy {
-   margin-left:100px;
-  }
+
 
 }
 
@@ -134,11 +131,11 @@ margin: 0;
 letter-spacing: 0.05em;
 color: var(--color-accent-yellow);
 }
-
-
-
-
 /* sections */
+.section-card.red-shadow{
+  width:800px;
+  height: 150px;
+}
 .sections {
 background-size: cover;
 display: flex;
@@ -147,7 +144,6 @@ align-items: center;
 padding: 80px 0;
 position: relative;
 width: 100%;
-
 }
 /* about */
 .about {
@@ -159,11 +155,7 @@ align-items: center;
 flex-direction: column;
 gap: 40px;
 padding: 0 40px;
-
   }
-
-
-
 .section-title-content {
 color: var(--color-white);
 font-family: var(--font-family-heading);
@@ -171,10 +163,7 @@ font-size: 32px;
 font-weight: 400;
 letter-spacing: 0.02em;
 margin: 0;
-
-
 }
-
 .section-title-red {
 color: var(--color-accent-red);
 }
@@ -196,16 +185,15 @@ gap: 20px;
       max-width: 100%;
       display:flex;
       display: flex;
-align-items: center;
-flex-direction: row;
-gap: 20px;
-flex:1;}
-
-
-
+      align-items: center;
+      flex-direction: row;
+      gap: 20px;
+      flex:1;}
+  .section-card-title-content{
+    height:220px;
+    width:360px;
   }
-
-
+  }
 .section-body-text-content {
 width: 100%;
 max-width: 460px;
@@ -246,13 +234,11 @@ padding: 0;
 .section-card-title {
 background-size: cover;
 display: flex;
-width: 250px;
+width: 220px;
 flex: 0 0 auto;
 justify-content: center;
 align-items: center;
 position: relative;
-
-
 }
 
 .section-card-title::after {
@@ -274,7 +260,8 @@ letter-spacing: 0.05em;
 margin: 0;
 z-index: 1;
 position: absolute;
-
+width:220px;
+height:155px;
 }
 
 
@@ -354,12 +341,8 @@ box-shadow: 12px 12px 2px 0 var(--color-accent-yellow);
 .header {
   height: 60px;
 }
-@@ -117,6 +310,7 @@ img {
-  height: 30px;
-}
-
-
-
+ img {
+  height: 30px;}
 /* sections */
 .sections {
   padding: 0;
@@ -392,13 +375,9 @@ box-shadow: 12px 12px 2px 0 var(--color-accent-yellow);
 }
 
 .section-card-title {
-  width: 120%;
-  height: 200px;
-  align-self: stretch;
-  img[src="https://cdn.glitch.global/dd29325c-0d25-451c-996f-d7a60772a4b5/hero.jpeg?v=1685611293394"]{ /*透けている部分*/
-
-
-  }}
+  width: 220px;
+  height: 150px;
+  align-self: stretch;}}
 
 .section-card-body {
   width: 100%;
@@ -407,7 +386,7 @@ box-shadow: 12px 12px 2px 0 var(--color-accent-yellow);
 }
 
 
-@media{
+@media(max-width: 750px){
   .section-card-text-content{
     margin-left:275px;
     height:100%;
@@ -416,28 +395,21 @@ box-shadow: 12px 12px 2px 0 var(--color-accent-yellow);
     flex-direction: column;
     font-size: 16px;
     transition-duration: 0.3s;
-    
-      
-}
-.section-card-text{
-  width: 190%;
     }
-
-.section-card-text-content {
-  width: 100%;
-  font-family: Inter;
-  font-size: 12px;
-    /*透けている部分*/
-    position: relative;
-    display: inline-block;
-    width: 100%; /* 必要に応じて調整 */
-    max-width:  /* 必要に応じて調整 */
-    display: block;
-    width: 100%;
-    filter: brightness(50%); /* 画像を暗くする */
-  margin-top:25px;
-}
-}
+  .section-card-text{
+    width: 190%;}
+  .section-card-text-content {
+   width: 100%;
+   font-family: Inter;
+   font-size: 12px;
+ /*透けている部分*/
+   position: relative;
+   display: inline-block;
+   width: 100%; /* 必要に応じて調整 */
+   max-width:  /* 必要に応じて調整 */
+   filter:brightness(50%); /* 画像を暗くする */
+   margin-top:25px;}
+        
 
 .section-button {
   height: 40px;
@@ -462,19 +434,12 @@ box-shadow: 12px 12px 2px 0 var(--color-accent-yellow);
 }
 
 /*ここから*/
-
-
-
-
-
 .course-image/*４つの写真*/ {
   position: relative;
   height: 150px;
   width:250px;
   overflow: hidden;
-
 }
-
 .course-image.section-card-title h3 {
   position: absolute;
   bottom: 10px;
@@ -490,29 +455,35 @@ box-shadow: 12px 12px 2px 0 var(--color-accent-yellow);
 .frontman {
   background: url('https://cdn.glitch.global/6210f1af-b1c6-4649-be45-b35f350f23cc/live.png?v=1717470703729') no-repeat center center;
   background-size: cover;
-  width: 250px;
+  width: 220px;
+  height:150px;
  color: white; /* 文字の色を白に設定 */
 }
 
 .backing {
   background: url('https://cdn.glitch.global/6210f1af-b1c6-4649-be45-b35f350f23cc/live.png?v=1717470703729') no-repeat center center;
   background-size: cover;
-height:170px;
-width: 250px;
+height:150px;
+width: 220px;
  color: white; /* 文字の色を白に設定 */
 }
 
+.course-image.backing,.course-image.frontman,.course-image.lead,.course-image.solo{
+  height:150px;
+  width: 220px;
+}
 .lead {
   background: url('https://cdn.glitch.global/6210f1af-b1c6-4649-be45-b35f350f23cc/live.png?v=1717470703729') no-repeat center center;
   background-size: cover;
-  width: 250px;
+  width: 220px;
+  height:150px;
  color: white; /* 文字の色を白に設定 */
 }
 
 .solo {
   background: url('https://cdn.glitch.global/6210f1af-b1c6-4649-be45-b35f350f23cc/live.png?v=1717470703729') no-repeat center center;
   background-size: cover;
-  width: 250px;
+  width: 220px;
  color: white; /* 文字の色を白に設定 */
 }
 
@@ -521,13 +492,15 @@ width: 250px;
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  width: 220px;
+  height: 150px;
   background: rgba(0, 0, 0, 0.5); /* 半透明の黒 */
   z-index: 1;
 }
 
 .course-image  {
+  width: 680px;
+  height: 200px;
   position: relative;
   z-index: 2; /* オーバーレイの上に配置 */
   text-align: center; /* テキストを中央に配置 */
@@ -581,42 +554,39 @@ h1, h2, h3 {
 }
 
 
-@media  {
-  .course-image.frontman,.course-image.backing,.course-image.lead,.course-image.solo,.section-card-title::after{
-    width: 680px;
-    display: flex;
-    align-items: center;
+@media(max-width:750px){
+  .course-image.lead::before,.course-image.backing::before,.course-image.solo::before,.course-image.frontman::before,::before,.section-card-title,.course-image.frontman,.course-image.backing,.course-image.lead,.course-image.solo,.section-card-title::after,.section-card-title,.section-card-text-content,.section-card-title-content,.section-card-text{
+    width: 360px;
+    display:flex;
+    align-items:center;
     justify-content: center;
     flex: 0 0 auto;
-    height: 200px;
+    height: 220px;
     position: center;
-    margin-left: -140px;
-  }
-
-  .section-card-text-content{
+   }
+   .section-card-text-content{
+    margin-left:-600px;
+    width:360px;
+   }
+   .section-card-body{
     width:680px;
-    margin-left: 550px;
-  }
-
-  .section-card-body{
-    width:680px;
-    height:157.5px;
-    margin-top:-50px;
-  }
-  .section-card-text-content{
-    margin-top:40px;
-  }
-    .section-body-img{
+    height:220px;
+    margin-top:-80px;
+   }
+   .section-body-img{
     display: none;
-  }
-  .section-card.red-shadow{
-    height: 312.5px;
-
-  }
-  .more{
-    margin-top:-10px;
-  }
-  }
+   }
+   .section-card.red-shadow{
+    height:347.5px;
+    width:360px;
+   }
+   .more{
+    margin-top:-60px;
+    margin-left:-400px;
+    width:60px;
+    height:17.5px;
+   }
+}
 
 
  
